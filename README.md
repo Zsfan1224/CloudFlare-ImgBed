@@ -1,6 +1,6 @@
 # CloudFlare-ImgBed
 
-开源图片/文件托管解决方案，基于 Cloudflare Pages 和 Telegram，支持 Telegram Bot 、 Cloudflare R2 ，S3 API 等多种不同存储渠道。
+开源图片/文件托管解决方案，基于 Cloudflare Pages，支持 Telegram Bot 、 Cloudflare R2 ，S3 API 等多种不同存储渠道。
 
 **前端仓库**：[MarSeventh/Sanyue-ImgHub](https://github.com/MarSeventh/Sanyue-ImgHub)
 
@@ -28,7 +28,7 @@
 >
 > - 前往 pages 管理页面，进入`设置`->`构建`，编辑`构建配置`，在`构建命令`处填写`npm install`
 >
->   ![image-20250206140650497](/static/readme/202502061406685.png)
+>   ![image-20250212190315179](static/readme/202502121903327.png)
 >
 > - 新版本所有设置项已**迁移至 管理端->系统设置 界面**，原则上无需再通过环境变量的方式进行设置，通过系统设置界面进行的设置将**覆盖掉**环境变量中的设置，但为了保证 **Telegram渠道的图片** 能够与旧版本相兼容，**若您之前设置了 Telegram 渠道相关的环境变量，请将其保留！**
 >
@@ -61,7 +61,9 @@
 
 **相关优质博文（感谢每一位鼎力支持的热心大佬）：**
 
-- [完全免费，图文教程手把手教你使用cloudflare搭建一个无限空间的私人图床 支持身份认证与成人元素鉴定！ - yunsen2025的小窝](https://www.yunsen2025.top/blog-cfpages-syq-imgbed)
+- [CloudFlare-ImgBed项目 – yunsen2025的小窝](https://www.yunsen2025.top/category/cloudflare-imgbed/)
+  - [完全免费，图文教程手把手教你使用cloudflare搭建一个无限空间的私人图床 支持身份认证与成人元素鉴定！ - yunsen2025的小窝](https://www.yunsen2025.top/blog-cfpages-syq-imgbed)
+  - [为CloudFlare-ImgBed图床配置国内CDN并分线路解析，以最低成本享受极致速度！ – yunsen2025的小窝](https://www.yunsen2025.top/cloudflare-imgbed-fen-xian-pei-zhi-guo-nei-cdn/)
 - [利用cloudflare pages搭建telegram频道图床 (lepidus.me)](https://blogstr.lepidus.me/post/1725801323700/)
 - [搭建基于CloudFlare和Telegram的免费图床教程 - 刘学馆 | Blog (sexy0769.com)](https://blog.sexy0769.com/skill/735.html)
 - [CloudFlare+Github，打造属于自己的免费图床 - 大头钉的小小blog (luckyting.top)](https://luckyting.top/index.php/archives/20/)
@@ -71,6 +73,19 @@
 <details>
     <summary>更新日志</summary>
 
+
+## 2025.3.1
+
+Add Features:
+
+- 支持粘贴多个链接同时上传
+- 支持存储和管理外链
+
+Fix Bugs:
+
+- 修复管理端复制 S3 链接的有关问题
+- 修复管理端部分页面设置不生效的问题
+- 修复渠道设置某些情况下不能保存的问题
 
 ## 2025.2.6
 
@@ -474,7 +489,8 @@ Add Features:
 
 
 <details>
-    <summary>v1.0版本 部署在Cloudflare上的方式</summary>
+    <summary>（已过时）v1.0版本 部署在Cloudflare上的方式</summary>
+
 
 
 
@@ -563,7 +579,8 @@ Add Features:
 
 
 <details>
-    <summary>v1.0 部署在服务器上的方式</summary>
+    <summary>（已过时）v1.0 部署在服务器上的方式</summary>
+
 
 
 
@@ -622,7 +639,7 @@ Add Features:
 
 
 <details>
-    <summary>v1.0 后台认证、自定义页面、缓存清除等设置</summary>
+    <summary>（已过时，可参考部分设置项的具体介绍）v1.0 后台认证、自定义页面、缓存清除等设置</summary>
 
 
 
@@ -897,6 +914,7 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
 38. :hourglass_flowing_sand:支持KV备份恢复功能
 39. :white_check_mark:~~页脚可自定义隐藏~~（2025.2.4已完成）
 40. :hourglass_flowing_sand:搜索功能增强
+41. :white_check_mark:支持粘贴多个链接，支持外链管理
 
 </details>
 
@@ -972,20 +990,11 @@ Web端在登录页面输入你的**认证码**即可登录使用；API端需要�
   
 - **Sponsors**：感谢以下赞助者对本项目的支持！
 
-  <div style="display: flex; flex-wrap: wrap;">
-    <div style="margin-right: 20px; text-align: center;">
-      <a href="https://afdian.com/a/nothin">
+  <a href="https://afdian.com/a/nothin">
         <img src="https://pic1.afdiancdn.com/user/e8af1436138e11ed945852540025c377/avatar/59db0533d82e4198f59e63df63a1917f_w640_h640_s114.jpeg?imageView2/1/w/240/h/240" width="100"/>
-        <div style="margin-top: 10px;">暔晓</div>
-      </a>
-    </div>
-    <div style="margin-right: 20px; text-align: center;">
-      <a href="https://afdian.com/u/1acef0be02d911ee90695254001e7c00">
-        <img src="https://pic1.afdiancdn.com/default/avatar/avatar-orange.png?imageView2/1/w/240/h/240" width="100"/>
-        <div style="margin-top: 10px;">狐狸汉克</div>
-      </a>
-    </div>
-  </div>
+      </a> <a href="https://afdian.com/u/1acef0be02d911ee90695254001e7c00">
+        <img src="https://pic1.afdiancdn.com/default/avatar/avatar-orange.png?imageView2/1/w/240/h/240" width="100"/></a><a href="https://afdian.com/u/412189a0284911eca59f52540025c377">
+        <img src="https://pic1.afdiancdn.com/default/avatar/avatar-orange.png?imageView2/1/w/120/h/120" width="100"/></a>
 
 # 8.Star History
 
